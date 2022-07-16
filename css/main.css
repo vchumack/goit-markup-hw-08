@@ -83,6 +83,7 @@ img {
 
 /* ------------------------------- Стилизация хедера ------------------------------- */
 .header-page {
+  display: none;
   border-bottom: 1px solid #ececec;
 }
 
@@ -91,16 +92,19 @@ img {
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   color: #2196f3;
 }
-
-.logo-general__inversion {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+@media screen and (min-width: 1200px) {
+  .logo-general__accent {
+    font-size: 26px;
+    line-height: 1.38;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .logo-general__accent {
+    font-size: 24px;
+    line-height: 1.37;
+  }
 }
 
 .logo--black {
@@ -964,10 +968,24 @@ img {
 
 .filter-list {
   margin-top: 0;
-  margin-bottom: 50px;
 }
-.filter-list__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (max-width: 767px) {
+  .filter-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+  }
 }
 .filter-list__btn {
   padding: 6px 22px;
@@ -990,6 +1008,37 @@ img {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 768px) {
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .projects-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects-list__item {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-list__item {
+    width: calc((100% - 90px) / 3);
+    margin: 15px;
+  }
+}
 .projects-list__link {
   display: inline-block;
   text-decoration: none;
