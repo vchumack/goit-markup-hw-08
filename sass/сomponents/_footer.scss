@@ -1,0 +1,183 @@
+/* ------------------------------- Стилизация футера ------------------------------- */
+.footer-page {
+   padding-bottom: 60px;
+
+   background-color: $footer-background-color;
+}
+
+.footer-box {
+   // display: flex;
+}
+
+.address-box {
+   margin-right: 70px;
+   padding-top: 60px;
+}
+
+.address-list {
+
+   // ------ address-list__item: not(:last-child)
+   &__item:not(:last-child) {
+      margin-bottom: 9px;
+   }
+
+   // ------ address-list__link
+   &__link {
+      font-style: normal;
+      text-decoration: none;
+
+      color: $white-text-color;
+
+      transition: color 250ms $timing-function;
+
+      &:hover,
+      &:focus {
+         color: $accent-color;
+      }
+   }
+
+   // ------- address-list__contacts
+   &__contacts {
+      font-style: normal;
+      text-decoration: none;
+
+      color: $secondary-link-color;
+      transition: color 250ms $timing-function;
+
+      &:hover,
+      &:focus {
+         color: $accent-color;
+      }
+   }
+
+}
+
+
+.join-box {
+   padding-top: 72px;
+   margin-right: 93px;
+}
+
+.footer-title {
+   margin-top: 0;
+   margin-bottom: 20px;
+
+   font-size: 14px;
+   line-height: 1;
+   text-transform: uppercase;
+
+   color: $footer-text-color;
+}
+
+.join-icon__list {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   padding: 0;
+
+}
+
+.join-icon__item:not(:last-child) {
+   margin-right: 10px;
+}
+
+.join-icon__link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+
+   margin-left: auto;
+   margin-right: auto;
+
+   fill: $white-text-color;
+   background-color: $icon-bg-color;
+
+   transition: fill 250ms $timing-function,
+      background-color 250ms $timing-function;
+
+   &:hover,
+   &:focus {
+      fill: $white-text-color;
+      background-color: $accent-color;
+   }
+
+}
+
+
+.mail-box {
+   padding-top: 72px;
+}
+
+.mail-form {
+   // display: flex;
+
+   // ------ mail-form__label
+   &__label {
+      margin-right: 12px;
+   }
+
+   // ------ mail-form__input
+   &__input {
+      width: 358px;
+      height: 50px;
+      padding: 15px 16px;
+      outline: none;
+
+
+      font-family: inherit;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.06em;
+      background-color: transparent;
+      color: $white-background-color;
+
+
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+   }
+
+   // ------ mail-form__input::placeholder
+   &__input::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+   }
+
+   // ------ mail-form__btn
+   &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      min-width: 200px;
+      height: 50px;
+
+
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.06em;
+      border: 1px solid transparent;
+      border-radius: 4px;
+
+      color: $white-text-color;
+      background-color: $accent-color;
+
+      cursor: pointer;
+   }
+
+   // ----- mail-form__svg
+   &__svg {
+      margin-left: 10px;
+   }
+
+}

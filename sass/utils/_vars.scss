@@ -1,0 +1,39 @@
+/* Палитра
++ primary BG цвет фона #ffffff
++ footer BG цвет фона футера и эффективные решения для бизнеса #2F303A
++ team цвет фона раздела наша команда #F5F4FA
++ logo цвет лого #000000
++ secondary вторичный цвет текста #212121 
++ main-text основной цвет текста #757575 
++ third белый #FFFFFF
++ accent акцент #2196F3
++ link-secondary вторичный белый rgba(255, 255, 255, 0.6)
+*/
+
+$main-text-color: #757575;
+$secondary-text-color: #212121;
+$white-text-color: #ffffff;
+$logo-color: #000000;
+$white-background-color: #ffffff;
+$secondary-background-color: #f5f4fa;
+$services-color: rgba(47, 48, 58, 0.8);
+$footer-background-color: #2f303a;
+$footer-text-color: rgba(255, 255, 255, 1);
+$accent-color: #2196f3;
+$accent-modal-btn-color: #188CE8;
+$secondary-link-color: rgba(255, 255, 255, 0.6);
+$border-color: #ececec;
+$secondary-border-color: #eeeeee;
+$icon-color: #AFB1B8;
+$icon-bg-color: #44454E;
+$accent-hover-color: rgba(33, 150, 243, 0.9);
+$overlay-color: rgba(0, 0, 0, 0.2);
+$modal-color: rgba(0, 0, 0, 0.1);
+$modal-border-color: rgba(33, 33, 33, 0.2);
+$textarea-color: rgba(117, 117, 117, 0.5);
+
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+$main-font: "Roboto", sans-serif;
+$second-font: "Raleway", sans-serif;

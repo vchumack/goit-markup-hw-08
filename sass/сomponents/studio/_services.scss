@@ -1,0 +1,62 @@
+/*---------------- Стилизация раздела c услугами ----------------*/
+
+.services-section {
+
+   //  ------ services-section__title
+   &__title {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 50px;
+
+      font-size: 36px;
+      line-height: 1.16;
+
+      color: $secondary-text-color;
+   }
+}
+
+
+
+.services-list {
+   display: flex;
+
+
+   // ----- services-list__item: not(:last-child)
+   &__item:not(:last-child) {
+      margin-right: 30px;
+   }
+
+   // ------ services-list__item
+   &__item {
+      position: relative;
+   }
+
+   // ------ services-list__img
+   &__img {
+      display: block;
+   }
+
+   // ------ services-list__box
+   &__box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      color: $white-text-color;
+      background-color: $services-color;
+   }
+
+}
