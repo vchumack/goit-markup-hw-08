@@ -1,11 +1,7 @@
 /*---------------- Стилизация раздела Hero ----------------*/
 .hero {
-   max-width: 1600px;
-   height: 600px;
    margin-left: auto;
    margin-right: auto;
-   padding-top: 200px;
-   padding-bottom: 200px;
 
    text-align: center;
    background-color: $footer-background-color;
@@ -19,22 +15,54 @@
 
 
 
+   @media screen and (max-width: 767px) {
+      max-width: 480px;
+   }
+
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 768px;
+   }
+
+   @media screen and (max-width: 1199px) {
+      height: 400px;
+      padding-top: 118px;
+      padding-bottom: 118px;
+   }
+
+   @media screen and (min-width: 1200px) {
+      max-width: 1600px;
+      height: 600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+   }
+
+
+
    // ----------- hero__title
    &__title {
       margin-top: 0;
       margin-bottom: 30px;
       margin-left: auto;
       margin-right: auto;
-      width: 696px;
 
       font-weight: 900;
-      font-size: 44px;
-      line-height: 1.36;
       text-align: center;
       letter-spacing: 0.06em;
       text-transform: uppercase;
 
       color: $white-text-color;
+
+      @media screen and (max-width: 1199px) {
+         max-width: 360px;
+         font-size: 26px;
+         line-height: 1.62;
+      }
+
+      @media screen and (min-width: 1200px) {
+         width: 696px;
+         font-size: 44px;
+         line-height: 1.36;
+      }
    }
 
    // ------------- hero__btn

@@ -1,17 +1,52 @@
 /* ------------------------------- Стилизация футера ------------------------------- */
 .footer-page {
    padding-bottom: 60px;
+   padding-top: 60px;
 
    background-color: $footer-background-color;
 }
 
 .footer-box {
-   // display: flex;
+
+   @media screen and (max-width: 1199px) {
+      text-align: center;
+   }
+
+   @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+   }
+}
+
+.addressjoin-box {
+   @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+   }
+
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+      margin-bottom: 60px;
+   }
 }
 
 .address-box {
-   margin-right: 70px;
-   padding-top: 60px;
+
+   @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+   }
+
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 76px;
+   }
+
+   @media screen and (min-width: 1200px) {
+      margin-right: 75px;
+   }
+
 }
 
 .address-list {
@@ -54,8 +89,15 @@
 
 
 .join-box {
-   padding-top: 72px;
-   margin-right: 93px;
+
+   @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+   }
+
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 89px;
+   }
+
 }
 
 .footer-title {
@@ -63,7 +105,7 @@
    margin-bottom: 20px;
 
    font-size: 14px;
-   line-height: 1;
+   line-height: 1.17;
    text-transform: uppercase;
 
    color: $footer-text-color;
@@ -109,21 +151,26 @@
 }
 
 
-.mail-box {
-   padding-top: 72px;
-}
+.mail-box {}
 
 .mail-form {
-   // display: flex;
+
+   @media screen and (min-width: 1200px) {
+      display: flex;
+   }
 
    // ------ mail-form__label
    &__label {
-      margin-right: 12px;
+
+      @media screen and (max-width: 767px) {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+      }
    }
 
    // ------ mail-form__input
    &__input {
-      width: 358px;
       height: 50px;
       padding: 15px 16px;
       outline: none;
@@ -141,6 +188,19 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
       border-radius: 4px;
+
+      @media screen and (max-width: 767px) {
+         max-width: 450px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         width: 450px;
+      }
+
+      @media screen and (min-width: 1200px) {
+         margin-right: 12px;
+         width: 358px;
+      }
    }
 
    // ------ mail-form__input::placeholder
@@ -173,6 +233,14 @@
       background-color: $accent-color;
 
       cursor: pointer;
+
+      @media screen and (max-width: 1199px) {
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 20px;
+      }
+
+
    }
 
    // ----- mail-form__svg
