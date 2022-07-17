@@ -21,7 +21,7 @@
 .filter-list {
    margin-top: 0;
 
-
+   // до 767 только телефон
    @media screen and (max-width: 767px) {
       display: flex;
       justify-content: flex-start;
@@ -31,6 +31,8 @@
       margin-bottom: 40px;
    }
 
+
+   // от 768 планшет и комп
    @media screen and (min-width: 768px) {
       display: flex;
       justify-content: center;

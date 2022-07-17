@@ -8,10 +8,13 @@
 
 .footer-box {
 
+   // до 1199 телефон и планшет
    @media screen and (max-width: 1199px) {
       text-align: center;
    }
 
+
+   // от 1200 только пк
    @media screen and (min-width: 1200px) {
       display: flex;
       justify-content: space-between;
@@ -20,6 +23,8 @@
 }
 
 .addressjoin-box {
+
+   // от 768 планшет и комп
    @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-between;
@@ -27,6 +32,8 @@
 
    }
 
+
+   // от 768 до 1199 только планшет
    @media screen and (min-width: 768px) and (max-width: 1199px) {
 
       margin-bottom: 60px;
@@ -35,14 +42,19 @@
 
 .address-box {
 
+   // до 767 только телефон
    @media screen and (max-width: 767px) {
       margin-bottom: 60px;
    }
 
+
+   // от 768 до 1199 только планшет
    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-left: 76px;
    }
 
+
+   // от 1200 только пк
    @media screen and (min-width: 1200px) {
       margin-right: 75px;
    }
@@ -90,10 +102,14 @@
 
 .join-box {
 
+
+   // до 767 только телефон
    @media screen and (max-width: 767px) {
       margin-bottom: 60px;
    }
 
+
+   // от 768 до 1199 только планшет
    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-right: 89px;
    }
@@ -155,6 +171,8 @@
 
 .mail-form {
 
+
+   // от 1200 только пк
    @media screen and (min-width: 1200px) {
       display: flex;
    }
@@ -162,6 +180,8 @@
    // ------ mail-form__label
    &__label {
 
+
+      // до 767 только телефон
       @media screen and (max-width: 767px) {
          width: 100%;
          display: flex;
@@ -189,14 +209,20 @@
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
       border-radius: 4px;
 
+
+      // до 767 только телефон
       @media screen and (max-width: 767px) {
          max-width: 450px;
       }
 
+
+      // от 768 до 1199 только планшет
       @media screen and (min-width: 768px) and (max-width: 1199px) {
          width: 450px;
       }
 
+
+      // от 1200 только пк
       @media screen and (min-width: 1200px) {
          margin-right: 12px;
          width: 358px;
@@ -234,6 +260,8 @@
 
       cursor: pointer;
 
+
+      // до 1199 телефон и планшет
       @media screen and (max-width: 1199px) {
          margin-left: auto;
          margin-right: auto;

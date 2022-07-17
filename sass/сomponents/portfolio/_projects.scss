@@ -1,12 +1,13 @@
 .projects-list {
 
-
+   // от 768 планшет и комп
    @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
       margin: -15px;
    }
 
+   // от 1200 только пк
    @media screen and (min-width: 1200px) {
       display: flex;
       flex-wrap: wrap;
@@ -23,17 +24,23 @@
 
    // ------ projects-list__item
    &__item {
+
+
       &:not(:last-child) {
+
+         // до 767 только телефон
          @media screen and (max-width: 767px) {
             margin-bottom: 30px;
          }
       }
 
+      // от 768 до 1199 только планшет
       @media screen and (min-width: 768px) and (max-width: 1199px) {
          width: calc((100% - 60px) / 2);
          margin: 15px;
       }
 
+      // от 1200 только пк
       @media screen and (min-width: 1200px) {
          width: calc((100% - 90px) / 3);
          margin: 15px;

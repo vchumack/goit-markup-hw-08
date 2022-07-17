@@ -83,8 +83,15 @@ img {
 
 /* ------------------------------- Стилизация хедера ------------------------------- */
 .header-page {
-  display: none;
+  position: relative;
   border-bottom: 1px solid #ececec;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
 }
 
 /*---------------- Стилизация логотипа ---------------- */
@@ -116,6 +123,48 @@ img {
   display: inline-block;
   margin-bottom: 20px;
   color: #ffffff;
+}
+
+/*---------------- Стилизация моб меню ----------------*/
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: aquamarine;
+  padding: 20px;
+  font-size: 40px;
+}
+.menu-container.is-open {
+  display: block;
+}
+
+/*---------------- Стилизация кнопки меню ----------------*/
+.menu-btn {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.menu-btn .icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+
+.icon-close {
+  position: absolute;
+  z-index: 1;
 }
 
 /*---------------- Стилизация менюшки ----------------*/
