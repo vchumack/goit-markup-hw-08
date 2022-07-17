@@ -60,23 +60,46 @@
 }
 
 
-/*---------------- Стилизация моб меню ----------------*/
+/*-------------------------------------- Стилизация моб меню ----------------*/
 .menu-container {
-   display: none;
 
+   background-color: $white-background-color;
 
-   position: absolute;
-   top: 100%; // или стояло 0 у меня
-   left: 0;
-   width: 100%;
-   background-color: aquamarine;
-   padding: 20px;
-   font-size: 40px;
+   // font-size: 40px;
 
    &.is-open {
       display: block;
    }
 
+   // до 767 только телефон
+   @media screen and (max-width: 767px) {
+      display: none;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 48px 40px;
+
+      overflow-y: scroll;
+   }
+
+   // от 768 планшет и комп
+   @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+   }
+
+}
+
+.nav {
+
+   // до 767 только телефон 
+   @media screen and (max-width: 767px) {
+      margin-bottom: 302px;
+   }
 }
 
 /*---------------- Стилизация кнопки меню ----------------*/
@@ -88,6 +111,11 @@
    padding: 0;
    border: 0;
    background-color: transparent;
+
+   // от 768 планшет и комп 
+   @media screen and (min-width: 768px) {
+      display: none;
+   }
 }
 
 .menu-btn .icon-close {
@@ -117,34 +145,83 @@
    // display: flex;
    margin-top: 0;
    margin-bottom: 0;
-   margin-left: 93px;
+
+
+   // от 768 до 1199 только планшет 
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      margin-left: 88px;
+   }
+
+   // от 1200 только пк 
+   @media screen and (min-width: 1200px) {
+
+      margin-left: 93px;
+   }
+
+
 
    // -------  nav-list__item
-
    &__item:not(:last-child) {
-      margin-right: 50px;
+
+
+      // до 767 только телефон 
+      @media screen and (max-width: 767px) {
+         margin-bottom: 30px;
+      }
+
+      // от 768 до 1199 только планшет 
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         margin-right: 50px;
+      }
+
+
+
+      // от 1200 только пк 
+      @media screen and (min-width: 1200px) {
+         margin-right: 50px;
+      }
+
    }
 
    // -------  nav-list__link
    &__link {
       display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-
       text-decoration: none;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 1.14;
       letter-spacing: 0.02em;
-
       color: $secondary-text-color;
 
       transition: color 250ms $timing-function;
+
+
+      // до 767 только телефон 
+      @media screen and (max-width: 767px) {
+         font-size: 40px;
+         line-height: 1.17;
+      }
+
+
+
+
+      // от 1200 только пк 
+      @media screen and (min-width: 1200px) {
+         padding-top: 32px;
+         padding-bottom: 32px;
+
+         font-size: 14px;
+         line-height: 1.14;
+
+      }
 
       &:hover,
       &:focus {
          color: $accent-color;
       }
+
+
+
+
    }
 
    // ------- nav-list__link--active
@@ -172,25 +249,50 @@
             background-color: $accent-color;
          }
 
+         // от 1200 только пк 
+         @media screen and (min-width: 1200px) {}
+
       }
    }
 }
 
-/*---------------- Стилизация контактов в хедере ----------------*/
+/*----------------------------- Стилизация контактов в хедере ----------------*/
 
 .contacts-list {
    // display: flex;
 
    margin-top: 0;
    margin-bottom: 0;
-   margin-left: auto;
+   // margin-left: auto;
 
-   // ---------- contacts-list__item
-   &__item:not(:last-child) {
-      margin-right: 50px;
+   // до 767 только телефон 
+   @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      margin-bottom: 64px;
    }
 
-   // ------------ ontacts-list__link
+
+
+
+
+
+   // ---------------------------------- contacts-list__item
+   &__item:not(:last-child) {
+
+
+      // до 767 только телефон 
+      @media screen and (max-width: 767px) {
+         margin-top: 32px;
+      }
+
+   }
+
+
+
+
+   // ----------------------------- contacts-list__link
    &__link {
       text-decoration: none;
       font-weight: 500;
@@ -210,13 +312,90 @@
       }
    }
 
-   // ------------ contacts-list__icon
+   &__link {
+
+      // до 767 только телефон 
+      @media screen and (max-width: 767px) {
+         font-size: 24px;
+         line-height: 1.16;
+      }
+   }
+
+   &__link--accent {
+
+      // до 767 только телефон 
+      @media screen and (max-width: 767px) {
+         font-size: 34px;
+         line-height: 1.17;
+         color: $accent-color;
+      }
+
+      // до 390 только телефон 
+      @media screen and (max-width: 390px) {
+         font-size: 27px;
+         line-height: 1.17;
+
+      }
+
+
+   }
+
+   // -------------------------------------- contacts-list__icon
    &__icon {
       margin-right: 10px;
 
       // до 767 только телефон
       @media screen and (max-width: 767px) {
          display: none;
+      }
+   }
+
+}
+
+//--------------------------------------------- стилизация соц сетей в моб меню хедера
+.social-list {
+
+
+   //от 768 планшет и комп 
+   @media screen and (min-width: 768px) {
+      display: none;
+   }
+
+
+   //до 767 только телефон 
+   @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+   }
+
+
+
+   &__item:not(:last-child) {
+
+      //до 767 только телефон 
+      @media screen and (max-width: 767px) {
+
+         // margin-right: 10px;
+         padding-right: 10px;
+
+         border-right: 1px solid $modal-border-color;
+      }
+   }
+
+   &__link {
+
+      //до 767 только телефон 
+      @media screen and (max-width: 767px) {
+         color: $accent-color;
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 22px;
+         text-decoration: none;
       }
    }
 }
