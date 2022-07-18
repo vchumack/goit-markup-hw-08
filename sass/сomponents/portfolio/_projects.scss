@@ -82,14 +82,18 @@
    // ------- projects-list__tip
    &__tip {
       position: absolute;
-      width: 100%;
+      // width: 100%;
+      max-width: 100%;
       height: 100%;
-      top: -100%;
+      top: -99%;
       left: 0;
+
+      display: flex;
+      align-items: center;
 
       margin-top: 0;
       margin-bottom: 0;
-      padding: 63px 24px;
+      padding: 24px;
       text-align: left;
 
       font-style: normal;
@@ -108,7 +112,15 @@
       transition: transform 250ms $timing-function;
 
       .projects-list__link:hover & {
-         transform: translateY(100%);
+         transform: translateY(99%);
+      }
+
+
+
+      //  до 327 только телефон 
+      @media screen and (max-width: 353px) {
+         font-size: 14px;
+         line-height: 1.56;
       }
    }
 

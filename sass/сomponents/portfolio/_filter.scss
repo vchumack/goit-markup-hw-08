@@ -37,8 +37,19 @@
       display: flex;
       justify-content: center;
       gap: 8px;
+
+   }
+
+   // от 768 до 1199 только планшет 
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 30px;
+   }
+
+   // от 1200 только пк 
+   @media screen and (min-width: 1200px) {
       margin-bottom: 50px;
    }
+
 
 
    // ----- filter-list__btn

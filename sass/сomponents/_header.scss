@@ -78,9 +78,7 @@
 
    // font-size: 40px;
 
-   &.is-open {
-      display: block;
-   }
+
 
    // до 767 только телефон
    @media screen and (max-width: 767px) {
@@ -94,6 +92,12 @@
       padding: 48px 40px;
 
       overflow-y: scroll;
+
+      &.is-open {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+      }
    }
 
    // от 768 планшет и комп
@@ -160,7 +164,9 @@
 
    // до 767 только телефон 
    @media screen and (max-width: 767px) {
-      margin-bottom: 302px;
+      display: flex;
+      flex-grow: 1;
+      margin-bottom: 50px;
    }
 }
 
